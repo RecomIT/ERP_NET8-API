@@ -1,0 +1,1 @@
+﻿C:\SonarQube\sonar-scanner-msbuild\sonar-scanner-4.8.1.3023\bin\sonar-scanner.bat -D"sonar.projectKey=ERPUI_1" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.token=sqp_d7e85826b93529779550b9d09264e238afad6750"

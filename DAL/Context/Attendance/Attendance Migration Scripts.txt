@@ -1,0 +1,10 @@
+﻿
+// Attendance Module Migration Scripts
+
+EntityFrameworkCore\Add-Migration 'Attendance Module Init 25 May, 2024' -Project DAL -context AttendanceModuleDbContext -OutputDir Context/Attendance/Migrations
+
+EntityFrameworkCore\Update-database -Project DAL -context AttendanceModuleDbContext
+
+EntityFrameworkCore\Remove-Migration  -Project DAL -context AttendanceModuleDbContext
+
+EntityFrameworkCore\Script-Migration  -Project DAL -context AttendanceModuleDbContext

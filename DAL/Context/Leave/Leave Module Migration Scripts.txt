@@ -1,0 +1,10 @@
+﻿
+// Leave Module Migration Scripts
+
+EntityFrameworkCore\Add-Migration 'Leave Module Init 25 May, 2024' -Project DAL -context LeaveModuleDbContext -OutputDir Context/Leave/Migrations
+
+EntityFrameworkCore\Update-database -Project DAL -context LeaveModuleDbContext
+
+EntityFrameworkCore\Remove-Migration  -Project DAL -context LeaveModuleDbContext
+
+EntityFrameworkCore\Script-Migration  -Project DAL -context LeaveModuleDbContext

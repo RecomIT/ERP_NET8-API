@@ -1,0 +1,10 @@
+﻿
+// Overtime Module Migration Scripts
+
+EntityFrameworkCore\Add-Migration 'Overtime Module Init 25 May, 2024' -Project DAL -context OvertimeModuleDbContext -OutputDir Context/Overtime/Migrations
+
+EntityFrameworkCore\Update-database -Project DAL -context OvertimeModuleDbContext
+
+EntityFrameworkCore\Remove-Migration  -Project DAL -context OvertimeModuleDbContext
+
+EntityFrameworkCore\Script-Migration  -Project DAL -context OvertimeModuleDbContext

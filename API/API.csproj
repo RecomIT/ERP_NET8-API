@@ -1,0 +1,169 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>false</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\WPPF_Module\**" />
+    <Content Remove="Areas\WPPF_Module\**" />
+    <EmbeddedResource Remove="Areas\WPPF_Module\**" />
+    <None Remove="Areas\WPPF_Module\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.Reporting" Version="2.1.0" />
+    <PackageReference Include="AspNetCore.ReportingServices" Version="2.1.0" />
+    <PackageReference Include="AspNetCore.ReportViewer" Version="3.0.0.200103" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="8.0.5" />
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.WebForms" Version="150.1400.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.8.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
+    <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.22" />
+    <PackageReference Include="Spire.PDF" Version="10.4.7" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="8.0.1" />
+    <PackageReference Include="System.CodeDom" Version="8.0.0" />
+    <PackageReference Include="System.Security.Permissions" Version="8.0.0" />
+
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Employee\Miscellaneous\" />
+    <Folder Include="wwwroot\Reports\AgaKhan\Attendance\" />
+    <Folder Include="wwwroot\Reports\AgaKhan\Employee\" />
+    <Folder Include="wwwroot\Reports\AgaKhan\Leave\" />
+    <Folder Include="wwwroot\Reports\NewFolder\" />
+    <Folder Include="wwwroot\Reports\PWC\Attendance\" />
+    <Folder Include="wwwroot\Reports\PWC\Employee\" />
+    <Folder Include="wwwroot\Reports\PWC\Leave\" />
+    <Folder Include="wwwroot\Reports\SCG\Attendance\" />
+    <Folder Include="wwwroot\Reports\SCG\Employee\" />
+    <Folder Include="wwwroot\Reports\SCG\Leave\" />
+    <Folder Include="wwwroot\Reports\SCG\Tax\" />
+    <Folder Include="wwwroot\Reports\Wounderman\Attendance\" />
+    <Folder Include="wwwroot\Reports\Wounderman\Employee\" />
+    <Folder Include="wwwroot\Uploads\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Reports\AgaKhan\AGKPayroll.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AGKPayroll.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Datasets\hr.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>hr.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Datasets\HRLatters.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>HRLatters.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Datasets\Leave\LeaveCard.Designer.cs">
+      <DependentUpon>LeaveCard.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Reports\Datasets\payroll.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>payroll.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Datasets\Payroll\Salary\PWCSalarySheet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PWCSalarySheet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Reports\Wounderman\Wunderman_Payroll.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Wunderman_Payroll.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Reports\Wounderman\Wunderman_UserPanel.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Wunderman_UserPanel.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\SCG\scg_dataset.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>scg_dataset.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\Reports\PWC\Salary\payroll_child_supplementary_payslip_detail_2.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\PWC\Salary\payroll_child_supplementary_payslip_detail.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\Wounderman\Leave\mainreport_leave_card_information.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\Wounderman\Leave\subreport_applied_leave_information.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\Wounderman\Leave\subreport_leave_balance_summary.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Reports\AgaKhan\AGKPayroll.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AGKPayroll.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Reports\Datasets\hr.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hr.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Reports\Datasets\HRLatters.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HRLatters.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Reports\Datasets\Leave\LeaveCard.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>LeaveCard.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="Reports\Datasets\payroll.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>payroll.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Reports\Datasets\Payroll\Salary\PWCSalarySheet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PWCSalarySheet.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Reports\Reports\Wounderman\Wunderman_Payroll.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Wunderman_Payroll.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Reports\Reports\Wounderman\Wunderman_UserPanel.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Wunderman_UserPanel.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Reports\SCG\scg_dataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>scg_dataset.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+
+</Project>

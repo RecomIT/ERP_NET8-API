@@ -1,0 +1,8 @@
+ERP_API: 51ebbe89415dde2092c8378c7c13e08cf5f79c19
+
+
+C:\SonarQube\sonar-scanner-msbuild\SonarScanner.MSBuild.exe begin /k:"ERP_API" /d:sonar.host.url="http://localhost:9000" /d:sonar.login="51ebbe89415dde2092c8378c7c13e08cf5f79c19"
+
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\"MsBuild.exe /t:Rebuild
+
+C:\SonarQube\sonar-scanner-msbuild\SonarScanner.MSBuild.exe end /d:sonar.login="51ebbe89415dde2092c8378c7c13e08cf5f79c19"

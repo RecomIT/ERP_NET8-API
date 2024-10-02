@@ -1,0 +1,9 @@
+﻿// Employee Module  Migration Scripts
+
+EntityFrameworkCore\Add-Migration 'Employee Module Init 25 May, 2024' -Project DAL -context EmployeeModuleDbContext -OutputDir Context/Employee/Migrations
+
+EntityFrameworkCore\Update-database -Project DAL -context EmployeeModuleDbContext
+
+EntityFrameworkCore\Remove-Migration  -Project DAL -context EmployeeModuleDbContext
+
+EntityFrameworkCore\Script-Migration  -Project DAL -context EmployeeModuleDbContext

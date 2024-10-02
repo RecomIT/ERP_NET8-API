@@ -1,0 +1,12 @@
+﻿STEP 1: GO TO appsettings.json change App_Environment From 'Local' TO 'Public'
+
+STEP 2: GO TO 'AppSetting.cs' class in Shared Project in the 'Services' folder & check both apiUrl & clientOrigin variable are correct URLS.
+
+STEP 3: GO TO 'Database.cs' class in DAL Project in the 'DapperObject' folder & change connection string in MakeConnectionString() method under the 
+DatabaseEnvironment == "Public" block.
+
+STEP 4: Don't forget to place you SQL Server 'User Id' & 'Password' in the connectionString.
+
+STEP 5: After completing the avobe steps then right click on API project make it start up project. Again right on it click on 'PUBLISH' 
+
+STEP 6: After Publishing attach web.config in the publish folder.

@@ -1,0 +1,10 @@
+﻿
+// Asset Module Migration Scripts
+
+EntityFrameworkCore\Add-Migration 'Asset Module Init 25 May, 2024' -Project DAL -context AssetModuleDbContext -OutputDir Context/Asset/Migrations
+
+EntityFrameworkCore\Update-database -Project DAL -context AssetModuleDbContext
+
+EntityFrameworkCore\Remove-Migration  -Project DAL -context AssetModuleDbContext
+
+EntityFrameworkCore\Script-Migration  -Project DAL -context AssetModuleDbContext

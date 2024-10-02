@@ -1,0 +1,10 @@
+﻿
+// Separation Module Migration Scripts
+
+EntityFrameworkCore\Add-Migration 'Separation Module Init 25 May, 2024' -Project DAL -context SeparationModuleDbContext -OutputDir Context/Separation/Migrations
+
+EntityFrameworkCore\Update-database -Project DAL -context SeparationModuleDbContext
+
+EntityFrameworkCore\Remove-Migration  -Project DAL -context SeparationModuleDbContext
+
+EntityFrameworkCore\Script-Migration  -Project DAL -context SeparationModuleDbContext

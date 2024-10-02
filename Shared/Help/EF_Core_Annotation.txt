@@ -1,0 +1,10 @@
+﻿// To make multiple properties to be the key of an entity  - this is known as a composite key.
+// Composite keys can only be configured using the Fluent API
+// Go to HRMSDbContext class in OnModelCreating()
+
+Example: 
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    modelBuilder.Entity<yourEntityClass>()
+        .HasKey(c => new { c.Column1, c.Column2 });
+}

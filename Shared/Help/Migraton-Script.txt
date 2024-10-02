@@ -1,0 +1,72 @@
+
+// Control Panel
+EntityFrameworkCore\Add-Migration '' -Project DAL -context ControlPanelDbContext -OutputDir ControlPanel/ControlPanelMigrations
+EntityFrameworkCore\Update-database -Project DAL -context ControlPanelDbContext
+EntityFrameworkCore\Remove-Migration -Project DAL -context ControlPanelDbContext
+
+// HRMS
+EntityFrameworkCore\Add-Migration '' -Project DAL -context HRMSDbContext -OutputDir HRMS/HRMSMigrations
+EntityFrameworkCore\Update-database -Project DAL -context HRMSDbContext
+EntityFrameworkCore\Remove-Migration  -Project DAL -context HRMSDbContext
+EntityFrameworkCore\Script-Migration  -Project DAL -context HRMSDbContext
+
+// Payroll
+EntityFrameworkCore\Add-Migration '' -Project DAL -context PayrollDbContext -OutputDir Payroll/PayrollMigrations
+EntityFrameworkCore\Update-database -Project DAL -context PayrollDbContext
+EntityFrameworkCore\Remove-Migration  -Project DAL -context PayrollDbContext
+EntityFrameworkCore\Script-Migration  -Project DAL -context PayrollDbContext
+
+
+//Payroll Cash Salary
+EntityFrameworkCore\Add-Migration '' -Project DAL -context CashSalaryDbContext -OutputDir Payroll/CashSalary/CashSalaryMigrations
+EntityFrameworkCore\Update-database -Project DAL -context CashSalaryDbContext
+EntityFrameworkCore\Remove-Migration  -Project DAL -context CashSalaryDbContext
+
+//Wallet Transfer Payment
+EntityFrameworkCore\Add-Migration '' -Project DAL -context WalletPaymentDbContext -OutputDir Payroll/WalletPayment/WalletPaymentMigrations
+EntityFrameworkCore\Update-database -Project DAL -context WalletPaymentDbContext
+EntityFrameworkCore\Remove-Migration  -Project DAL -context WalletPaymentDbContext
+
+//Incentive Payment
+EntityFrameworkCore\Add-Migration '' -Project DAL -context IncentiveDbContext -OutputDir Payroll/Incentive/IncentiveMigrations
+EntityFrameworkCore\Update-database -Project DAL -context IncentiveDbContext
+EntityFrameworkCore\Remove-Migration  -Project DAL -context IncentiveDbContext
+
+Shared: https://localhost:44363/
+IS4: https://localhost:44380/
+
+dotnet ef migrations script --no-build --idempotent --configuration Release --output "E:\Recom_Projects\ERP_PROJECT\ERP_API\API\obj\Release\net5.0\win-x64\PubTmp\EFSQLScripts\DAL.ControlPanel.ControlPanelDbContext.sql" --context DAL.ControlPanel.ControlPanelDbContext 
+// Employee Module  Migration Scripts
+EntityFrameworkCore\Add-Migration '' -Project DAL -context EmployeeModuleDbContext -OutputDir Employee_Module/EmployeeModuleMigrations
+EntityFrameworkCore\Update-database -Project DAL -context EmployeeModuleDbContext
+EntityFrameworkCore\Remove-Migration  -Project DAL -context EmployeeModuleDbContext
+
+// Attendance Module Migration Scripts
+EntityFrameworkCore\Add-Migration '' -Project DAL -context AttendanceModuleDbContext -OutputDir Attendance_Module/EmployeeModuleMigrations
+EntityFrameworkCore\Update-database -Project DAL -context AttendanceModuleDbContext
+EntityFrameworkCore\Remove-Migration  -Project DAL -context AttendanceModuleDbContext
+
+// Leave Module Migration Scripts
+EntityFrameworkCore\Add-Migration '' -Project DAL -context LeaveModuleDbContext -OutputDir Leave_Module/LeaveModuleMigrations
+EntityFrameworkCore\Update-database -Project DAL -context LeaveModuleDbContext
+EntityFrameworkCore\Remove-Migration  -Project DAL -context LeaveModuleDbContext
+
+// Overtime Module Migration Scripts
+EntityFrameworkCore\Add-Migration '' -Project DAL -context OvertimeModuleDbContext -OutputDir Payroll/OvertimeModuleMigrations
+EntityFrameworkCore\Update-database -Project DAL -context OvertimeModuleDbContext
+EntityFrameworkCore\Remove-Migration  -Project DAL -context OvertimeModuleDbContext
+
+
+// Direct Migration To Scripts
+EntityFrameworkCore\Script-Migration -Project DAL -context PayrollDbContext
+
+// Separation
+EntityFrameworkCore\Add-Migration '' -Project DAL -context SeparationModuleDbContext -OutputDir Separation_Module/SeparationMigrations
+EntityFrameworkCore\Update-database -Project DAL -context SeparationModuleDbContext
+EntityFrameworkCore\Remove-Migration  -Project DAL -context SeparationModuleDbContext
+
+
+// Asset
+EntityFrameworkCore\Add-Migration '' -Project DAL -context AssetModuleDbContext -OutputDir Asset_Module/AssetModuleMigrations
+EntityFrameworkCore\Update-database -Project DAL -context AssetModuleDbContext
+EntityFrameworkCore\Remove-Migration  -Project DAL -context AssetModuleDbContext

@@ -1,0 +1,10 @@
+﻿
+// Training Module Migration Scripts
+
+EntityFrameworkCore\Add-Migration 'Training Module Init 25 May, 2024' -Project DAL -context TrainingModuleDbContext -OutputDir Context/Training/Migrations
+
+EntityFrameworkCore\Update-database -Project DAL -context TrainingModuleDbContext
+
+EntityFrameworkCore\Remove-Migration  -Project DAL -context TrainingModuleDbContext
+
+EntityFrameworkCore\Script-Migration  -Project DAL -context TrainingModuleDbContext

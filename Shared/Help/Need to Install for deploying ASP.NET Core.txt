@@ -1,0 +1,11 @@
+Need to Install for deploying ASP.Net Core 5 application.
+
+1. Download Microsoft .NET 5.0.17 Hosting Bundle [URL: https://download.visualstudio.microsoft.com/download/pr/05726c49-3a3d-4862-9ff8-0660d9dc3c52/71c295f9287faad89e2d3233a38b44fb/dotnet-hosting-5.0.17-win.exe]
+2. Download .NET Runtime 5.0.17 (x64)
+3. Download .NET Runtime 5.0.17 (x86)
+4. Download Microsoft ASP.NET Core - Shared freamwork 5.0.17 (x64)
+5. Download Microsoft ASP.NET Core - Shared freamwork 5.0.17 (x86)
+6. IIS URL rewrite module 2
+
+If you have desktop application project
+7. Download Microsoft Windows desktop runtime - Shared freamwork 5.0.17 (x86)

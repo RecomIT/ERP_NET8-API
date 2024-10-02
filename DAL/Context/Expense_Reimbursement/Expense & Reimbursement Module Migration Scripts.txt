@@ -1,0 +1,10 @@
+﻿
+// Expense & Reimbursement Module Migration Scripts
+
+EntityFrameworkCore\Add-Migration 'Expense and Reimbursement Module Init 09 June, 2024' -Project DAL -context Expense_ReimbursementModuleDbContext -OutputDir Context/Expense_Reimbursement/Migrations
+
+EntityFrameworkCore\Update-database -Project DAL -context Expense_ReimbursementModuleDbContext
+
+EntityFrameworkCore\Remove-Migration  -Project DAL -context Expense_ReimbursementModuleDbContext
+
+EntityFrameworkCore\Script-Migration  -Project DAL -context Expense_ReimbursementModuleDbContext

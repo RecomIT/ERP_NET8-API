@@ -1,0 +1,8 @@
+﻿1.
+C:\SonarQube\sonar-scanner-msbuild\SonarScanner.MSBuild.exe begin /k:"ERPAPI_1" /d:sonar.host.url="http://localhost:9000" /d:sonar.token="sqp_3e0911839e07698ce5eb8cd542b98f4a2a856ff9"
+
+2.
+"C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\"MsBuild.exe /t:Rebuild
+
+3.
+C:\SonarQube\sonar-scanner-msbuild\SonarScanner.MSBuild.exe end /d:sonar.token="sqp_3e0911839e07698ce5eb8cd542b98f4a2a856ff9"

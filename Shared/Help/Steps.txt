@@ -1,0 +1,25 @@
+﻿=== Backend
+Shared
+	-- Domain Model
+	-- ViewModel
+	-- Automapper Profile add
+DAL	
+	-add class table DatabaseContext
+	-Migration
+	-add table class Repository
+BLL
+	- IAllownaceBusinees
+	- IAllownaceBusinees implementation
+	- IAllownaceBusinees Injecting in BLInjector
+
+- SQL 	- Store procedure make
+
+- Controller - ActionMethod
+
+
+=== Fornt end
+-Component 
+	- Service add
+- html 	- markup
+- routing 
+

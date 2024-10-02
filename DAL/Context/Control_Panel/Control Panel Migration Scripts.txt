@@ -1,0 +1,10 @@
+﻿
+// Control Panel Migration Scripts
+
+EntityFrameworkCore\Add-Migration 'Control Panel Init 25 May, 2024' -Project DAL -context ControlPanelDbContext -OutputDir Context/Control_Panel/Migrations
+
+EntityFrameworkCore\Update-database -Project DAL -context ControlPanelDbContext
+
+EntityFrameworkCore\Remove-Migration -Project DAL -context ControlPanelDbContext
+
+EntityFrameworkCore\Script-Migration  -Project DAL -context ControlPanelDbContext

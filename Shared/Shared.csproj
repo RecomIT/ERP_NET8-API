@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Employee\Domain\ControlPanel_Shared_Tables\**" />
+	  <Compile Remove="Models\QueryParam\**" />
+	  <Compile Remove="Payroll\Domain\Salary\Config\**" />
+	  <Compile Remove="Payroll\Domain\Salary\Deduction\**" />
+	  <Compile Remove="Payroll\Domain\Salary\Process\**" />
+	  <Compile Remove="Payroll\Domain\Salary\Variable\**" />
+	  <Compile Remove="Payroll\Filter\Projected Allowance\**" />
+	  <EmbeddedResource Remove="Employee\Domain\ControlPanel_Shared_Tables\**" />
+	  <EmbeddedResource Remove="Models\QueryParam\**" />
+	  <EmbeddedResource Remove="Payroll\Domain\Salary\Config\**" />
+	  <EmbeddedResource Remove="Payroll\Domain\Salary\Deduction\**" />
+	  <EmbeddedResource Remove="Payroll\Domain\Salary\Process\**" />
+	  <EmbeddedResource Remove="Payroll\Domain\Salary\Variable\**" />
+	  <EmbeddedResource Remove="Payroll\Filter\Projected Allowance\**" />
+	  <None Remove="Employee\Domain\ControlPanel_Shared_Tables\**" />
+	  <None Remove="Models\QueryParam\**" />
+	  <None Remove="Payroll\Domain\Salary\Config\**" />
+	  <None Remove="Payroll\Domain\Salary\Deduction\**" />
+	  <None Remove="Payroll\Domain\Salary\Process\**" />
+	  <None Remove="Payroll\Domain\Salary\Variable\**" />
+	  <None Remove="Payroll\Filter\Projected Allowance\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Expense_Reimbursement\DTO\Request\RequestDTO.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="13.0.1" />
+		<PackageReference Include="Dapper" Version="2.1.35" />
+		<PackageReference Include="EPPlus" Version="7.1.0" />
+		<PackageReference Include="itext7" Version="8.0.0" />
+		<PackageReference Include="itext7.bouncy-castle-fips-adapter" Version="8.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.3" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.3" />
+		<PackageReference Include="NLog" Version="5.2.8" />
+		<PackageReference Include="NLog.Extensions.Logging" Version="5.3.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+	<Folder Include="Employee\DTO\Lunch\" />
+	<Folder Include="Models\Dashboard\AdminDashboard\" />
+	<Folder Include="Payroll\DTO\Incentive\QuarterlyIncentive\" />
+	<Folder Include="Payroll\Helpers\SalaryReview\" />
+	</ItemGroup>
+
+</Project>
